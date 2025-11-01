@@ -1,6 +1,6 @@
 # pertemuan-05
 
-IM : 2511500047<br>
+NIM : 2511500047<br>
 Nama : Fika Haliza<br>
 
 Hari Ini, Rabu 30 Oktober 2025, saya mempelajari:
@@ -12,4 +12,4 @@ Hari Ini, Rabu 30 Oktober 2025, saya mempelajari:
   <li>class menu-toggle mobile</li>
   <li>styling nav mobile</li>
   <li>styling nav menu mobile</li>
-  <li>membuat scrip.js</li>
+  <li>membuat script.js</li>
