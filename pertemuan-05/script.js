@@ -186,10 +186,11 @@ window.addEventListener('resize', applyResponsiveLayout);
 
 });
 
-  const homeSection = document.getElementById("home"); 
+  const homeSection = document.getElementById("home", function () { 
   const ucapan = document.createElement("p");
   ucapan.textContent = "Halo! Selamat datang di halaman saya!";
   homeSection.appendChild(ucapan);
+});
   
 document.getElementById("txtPesan").addEventListener("input", function () {
   const panjang = this.value.length;
