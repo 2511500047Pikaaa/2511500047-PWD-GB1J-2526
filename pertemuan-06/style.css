@@ -51,7 +51,8 @@ header li a:active {
 
 #home,
 #about,
-#Contact {
+#Contact,
+#ipk {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
@@ -62,7 +63,8 @@ header li a:active {
 
 #home h2,
 #about h2,
-#Contact h2 {
+#Contact h2,
+#ipk h2 {
   color: #003366;
   border-bottom: 2px solid #003366;
   padding-bottom: 6px;
@@ -158,6 +160,47 @@ footer {
   cursor: pointer;
 }
 
+#ipk .matkul div,
+#ipk .total div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+#ipk .label {
+  min-width: 180px;
+  color: #003366;
+  font-weight: 600;
+  text-align: right;
+  padding-right: 16px;
+  flex-shrink: 0;
+}
+
+#ipk .value {
+  flex: 1;
+}
+
+#ipk .total {
+  background-color: #f9f9f9;
+  border-top: 2px solid #003366;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+#ipk .total .label {
+  font-weight: bold;
+  color: #003366;
+}
+
+#ipk .total .value {
+  font-weight: bold;
+  color: #000;
+}
+
 @media (max-width: 600px) {
   .menu-toggle {
     display: block;
@@ -207,13 +250,16 @@ footer {
   }
 
   #about p,
-  #Contact label {
+  #Contact label,
+  #ipk .matkul div,
+  #ipk .total div {
     flex-direction: column;
     align-items: flex-start;
   }
 
   #about strong,
-  #Contact label > span {
+  #Contact label > span,
+  #ipk .label {
     text-align: left;
     padding-right: 0;
     margin-bottom: 4px;
