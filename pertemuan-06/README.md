@@ -9,6 +9,6 @@ Saya Belajar :
 <ol>
     <li>Skrip php Hello World</li>
     <li>Copy index.html, style.css, script.js (pertemuan-05)</li>
-    <li></li>
+    <li>Membuat Section about dengan Variabel php</li>
     <li></li>
 </ol>
