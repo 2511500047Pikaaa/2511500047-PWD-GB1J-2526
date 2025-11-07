@@ -10,5 +10,5 @@ Saya Belajar :
     <li>Skrip php Hello World</li>
     <li>Copy index.html, style.css, script.js (pertemuan-05)</li>
     <li>Membuat Section about dengan Variabel php</li>
-    <li></li>
+    <li>kalkulasi nilai akhir, grade, ipk</li>
 </ol>
