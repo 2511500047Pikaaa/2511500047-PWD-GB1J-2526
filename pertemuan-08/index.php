@@ -52,7 +52,7 @@ endif;
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
-    <section id="aboutmee">
+    <section id="conta">
 
       <h2>Biodata siswa</h2>
 
@@ -71,7 +71,7 @@ endif;
           <input type="text" id="txtTanggal_lahir" name="txtTanggal_lahir" placeholder="Masukan Tanggal Lahir" required autocomplete="tanggal_lahir">
         </label>
         <label for="txtHobi"><span>Hobi:</span>
-          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukan Tanggal Lahir" required autocomplete="hobi">
+          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukan Hobi" required autocomplete="hobi"
         </label>
         <label for="txtPasangan"><span>Pasangan:</span>
           <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Pasangan" required autocomplete="pasangan">
@@ -97,34 +97,6 @@ endif;
 
     </section>
 
-    <section id="about">
-      <?php
-      $nim = 2511500010;
-      $NIM = '0344300002';
-      $nama = "Say'yid Abdullah";
-      $Nama = 'Al\'kautar Benyamin';
-      $tempat = "Jebus";
-      ?>
-      <h2>Tentang Saya</h2>
-      <p><strong>NIM:</strong>
-        <?php
-        echo $NIM;
-        ?>
-      </p>
-      <p><strong>Nama Lengkap:</strong>
-        <?php
-        echo $Nama;
-        ?> &#128526;
-      </p>
-      <p><strong>Tempat Lahir:</strong> <?php echo $tempat; ?></p>
-      <p><strong>Tanggal Lahir:</strong> 1 Januari 2000</p>
-      <p><strong>Hobi:</strong> Memasak, coding, dan bermain musik &#127926;</p>
-      <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
-      <p><strong>Pekerjaan:</strong> Dosen di ISB Atma Luhur &copy; 2025</p>
-      <p><strong>Nama Orang Tua:</strong> Bapak Setiawan dan Ibu Maria</p>
-      <p><strong>Nama Kakak:</strong> Antonius Setiawan</p>
-      <p><strong>Nama Adik:</strong> <?php echo $sespesan ?></p>
-    </section>
 
     <section id="contact">
       <h2>Kontak Kami</h2>
