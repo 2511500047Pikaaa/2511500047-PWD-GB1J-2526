@@ -52,7 +52,7 @@ endif;
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
-    <section id="conta">
+    <section id="contact">
 
       <h2>Biodata siswa</h2>
 
@@ -71,7 +71,7 @@ endif;
           <input type="text" id="txtTanggal_lahir" name="txtTanggal_lahir" placeholder="Masukan Tanggal Lahir" required autocomplete="tanggal_lahir">
         </label>
         <label for="txtHobi"><span>Hobi:</span>
-          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukan Hobi" required autocomplete="hobi"
+          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukan Hobi" required autocomplete="hobi">
         </label>
         <label for="txtPasangan"><span>Pasangan:</span>
           <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Pasangan" required autocomplete="pasangan">

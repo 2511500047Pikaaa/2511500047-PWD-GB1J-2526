@@ -1,4 +1,5 @@
-session_start();
+<?php
+    session_start();
     $sesnim = $_POST["txtNim"];
     $sesnama = $_POST["txtNama1"];
     $sesTempat_lahir = $_POST["txtTempat_lahir"];
