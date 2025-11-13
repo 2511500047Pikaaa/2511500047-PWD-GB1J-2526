@@ -10,4 +10,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
   <li>silahkan diisi sesuai proses pengerjaan kalian masing-masing</li>
   membuat section#about biodata mahasiswa</li>
+  membuat section#about ditambah batal kirim</li>
 </ol>
