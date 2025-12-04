@@ -8,3 +8,4 @@ Nama : Fika Haliza<br>
  <li>modif bentuk array associative</li>
  <li>menghapus baris 23-32</li>
  <li>menambahkan kode suffix</li>
+ <li>menambahkan php.foreach di section#about</li>
