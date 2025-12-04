@@ -6,3 +6,4 @@ Nama : Fika Haliza<br>
 <br>
  <ol>
  <li>membuat koneksi.php</li>
+ <li>membuat read.php</li>
