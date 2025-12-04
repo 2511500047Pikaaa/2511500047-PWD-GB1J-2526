@@ -6,3 +6,4 @@ Nama : Fika Haliza<br>
 <br>
  <ol>
  <li>modif bentuk array associative</li>
+ <li>menghapus baris 23-32</li>
