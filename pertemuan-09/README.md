@@ -12,3 +12,4 @@ Nama : Fika Haliza<br>
  <li>menghapus baris 134-144</li>
  <li>menambahkan fungsi</li> 
  <li>menambahkan format tanggal</li>
+ <li>menggabungkan $label $nilai $suffix menggunakan html</li>
