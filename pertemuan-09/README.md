@@ -9,3 +9,4 @@ Nama : Fika Haliza<br>
  <li>menghapus baris 23-32</li>
  <li>menambahkan kode suffix</li>
  <li>menambahkan php.foreach di section#about</li>
+ <li>menghapus baris 134-144</li>
