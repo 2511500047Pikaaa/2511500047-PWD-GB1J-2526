@@ -14,3 +14,4 @@ Nama : Fika Haliza<br>
  <li>menambahkan format tanggal</li>
  <li>menggabungkan $label $nilai $suffix menggunakan html</li>
  <li>mengganti phpforeach</li>
+ <li>menambahkah kode require_once</li>
