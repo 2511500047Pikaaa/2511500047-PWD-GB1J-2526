@@ -14,7 +14,7 @@ function formatTanggal($tgl)
   return date("d M Y", strtotisme($tgl));
 }
 
-funcion tampilkanBiodata($conf, $arr)
+function tampilkanBiodata($conf, $arr)
 {
   $html = "";
   foreach ($conf as $k => $v) {
