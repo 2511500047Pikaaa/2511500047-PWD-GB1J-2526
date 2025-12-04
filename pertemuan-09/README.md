@@ -10,3 +10,5 @@ Nama : Fika Haliza<br>
  <li>menambahkan kode suffix</li>
  <li>menambahkan php.foreach di section#about</li>
  <li>menghapus baris 134-144</li>
+ <li>menambahkan fungsi</li> 
+ <li>menambahkan format tanggal</li>
