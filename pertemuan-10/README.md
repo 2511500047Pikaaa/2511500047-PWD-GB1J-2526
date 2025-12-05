@@ -6,6 +6,6 @@ Nama : Fika Haliza<br>
 <br>
  <ol>
  <li>membuat koneksi.php</li>
- <li>membuat read.php</li>
  <li>membuat database db_2025</li>
  <li>membuat tbl-tamu</li>
+ <li>membuat read.php</li>
