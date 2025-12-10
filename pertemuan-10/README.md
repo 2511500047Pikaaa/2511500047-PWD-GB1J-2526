@@ -11,3 +11,5 @@ Nama : Fika Haliza<br>
  <li>membuat read.php</li>
  <li>menambahkan localhost.sql</li>
  <li>modif kode read_inc.php</li>
+ <li>mengganti baris 146</li>
+ <li>menghapus kode 133-141 di index.html</li>

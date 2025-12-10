@@ -33,7 +33,7 @@ require_once __DIR__ . '/fungsi.php';
       <h2>Selamat Datang</h2>
       <?php
       echo "halo dunia!<br>";
-      echo "nama saya hadi";
+      echo "nama saya pikaa";
       ?>
       <p>Ini contoh paragraf HTML.</p>
     </section>
@@ -130,16 +130,6 @@ require_once __DIR__ . '/fungsi.php';
         <button type="reset">Batal</button>
       </form>
 
-      <?php
-      $contact = $_SESSION["contact"] ?? [];
-
-      $fieldContact = [
-        "nama" => ["label" => "Nama:", "suffix" => ""],
-        "email" => ["label" => "Email:", "suffix" => ""],
-        "pesan" => ["label" => "Pesan Anda:", "suffix" => ""]
-      ];
-      ?>
-
       <br>
       <hr>
       <h2>Yang menghubungi kami</h2>
@@ -148,7 +138,7 @@ require_once __DIR__ . '/fungsi.php';
   </main>
 
   <footer>
-    <p>&copy; 2025 Yohanes Setiawan Japriadi [0344300002]</p>
+    <p>&copy; 2025 Fika Haliza [2511500047]</p>
   </footer>
 
   <script src="script.js"></script>
