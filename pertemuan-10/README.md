@@ -9,3 +9,4 @@ Nama : Fika Haliza<br>
  <li>membuat database db_2025</li>
  <li>membuat tbl-tamu</li>
  <li>membuat read.php</li>
+ <li>menambahkan localhost.sql</li>
