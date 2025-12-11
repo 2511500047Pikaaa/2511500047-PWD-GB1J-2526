@@ -7,3 +7,4 @@ Nama : Fika Haliza<br>
  <ol>
  <li>update fungsi.php untuk helper redirect sederhana</li>
  <li>menambahkan penangkap pesan sukses/gagal</li>
+ <li>menampilkan flash message</li>
