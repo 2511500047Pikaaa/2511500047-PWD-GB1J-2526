@@ -8,3 +8,4 @@ Nama : Fika Haliza<br>
  <li>update fungsi.php untuk helper redirect sederhana</li>
  <li>menambahkan penangkap pesan sukses/gagal</li>
  <li>menampilkan flash message</li>
+ <li>insert tbl_tamu dengan prepared statement mysqli</li>
