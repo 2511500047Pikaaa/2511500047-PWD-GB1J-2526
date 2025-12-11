@@ -35,5 +35,6 @@ while ($row = mysqli_fetch_assoc($q)) {
         "pesan" => $row["cpesan"] ?? $row["pesan"] ?? ""
     ];
 
-    echo tampilkanBiodata($fieldContact, $arrContact);
+ echo tampilkanBiodata($fieldContact, $arrContact);
+
 }
