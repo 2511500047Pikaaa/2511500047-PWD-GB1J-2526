@@ -109,7 +109,7 @@ require_once __DIR__ . '/fungsi.php';
       <?= tampilkanBiodata($fieldConfig, $biodata) ?>
     </section>
 
-    >?php
+    <?php
     $flash_sukses = $_SESSION['flash_sukses'] ?? ''; #jika query sukses
     $flash_error  = $_SESSION['flash_error'] ?? ''; #jika ada error 
     $old          = $_SESSION['old'] ?? []; #untuk nilai lama form 
@@ -131,7 +131,7 @@ require_once __DIR__ . '/fungsi.php';
           <?= $flash_error; ?>
         </div>
       <php endif; ?>
-        
+
       <form action="proses.php" method="POST">
 
         <label for="txtNama"><span>Nama:</span>
