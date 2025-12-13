@@ -41,9 +41,9 @@ CREATE TABLE `tbl_tamu` (
 --
 
 INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`) VALUES
-(1, 'nur hasanah', 'nur123@gmail.com', 'tetaplah jadi sahabat terbaik ku'),
-(2, 'ridho juliansyah', 'ridho@gmail.com', 'lovee youuu sayanggg, semangatt'),
-(3, 'panji', 'panji123@gmail.com', 'jangan lupa belajar');
+(1, 1, 'nur hasanah', 'nur123@gmail.com', 'tetaplah jadi sahabat terbaik ku'),
+(2, 2, 'ridho juliansyah', 'ridho@gmail.com', 'lovee youuu sayanggg, semangatt'),
+(3, 3, 'panji', 'panji123@gmail.com', 'jangan lupa belajar');
 
 --
 -- Indexes for dumped tables
