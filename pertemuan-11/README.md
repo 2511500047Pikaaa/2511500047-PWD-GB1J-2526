@@ -10,3 +10,5 @@ Nama : Fika Haliza<br>
  <li>menampilkan flash message</li>
  <li>insert tbl_tamu dengan prepared statement mysqli</li>
  <li>menambahkan kolom No</li>
+ <li>membuat latihan inti</li>
+ 
