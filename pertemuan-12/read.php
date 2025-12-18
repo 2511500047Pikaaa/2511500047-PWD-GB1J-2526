@@ -32,7 +32,6 @@ if (!$q) {
 <?php endif; ?>
 
 <table border="1" cellpadding="8" cellspacing="0">
-
     <tr>
         <th>No</th>
         <th>Aksi</th>
@@ -50,7 +49,7 @@ if (!$q) {
             <td><?= $row['cid']; ?></td>
             <td><?= htmlspecialchars($row['cnama']); ?></td>
             <td><?= htmlspecialchars($row['cemail']); ?></td>
-            <td><?= n12br(htmlspecialchars$row['cpesan']); ?></td>
+            <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
             <td><?= formatTanggal(htmlspecialchars($row['dcreated_at'])); ?></td>
         <tr>
     <?php endwhile; ?>
