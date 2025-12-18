@@ -147,11 +147,6 @@ require_once __DIR__ . '/fungsi.php';
           <small id="charCount">0/200 karakter</small>
         </label>
 
-        <label>
-          <span>Berapa hasil 2 + 3?</span>
-          <input type="text" name="captcha" required>
-        </label>
-
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
