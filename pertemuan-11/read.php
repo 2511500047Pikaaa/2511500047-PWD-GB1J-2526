@@ -15,6 +15,7 @@ $no = 1;
         <th>Nama</th>
         <th>Email</th>
         <th>Pesan</th>
+        <th>Created At</th>
     </tr>
 
     <?php while ($row = mysqli_fetch_assoc($q)): ?>
@@ -24,6 +25,7 @@ $no = 1;
             <td><?= $row['cnama']; ?></td>
             <td><?= $row['cemail']; ?></td>
             <td><?= $row['cpesan']; ?></td>
+            <td><?= $row['created_at']; ?></td>
         </tr>
 
     <?php endwhile; ?>
