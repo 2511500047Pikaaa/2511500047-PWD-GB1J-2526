@@ -9,3 +9,4 @@ Nama : Fika Haliza<br>
  <li>membuat cid di-casting</li>
  <li>menambahkan penampil flash sukses dan flash error</li>
  <li>membuat file edit.php</li>
+ <li>membuat file proses_update.php</li>
