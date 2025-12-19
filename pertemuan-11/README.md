@@ -12,3 +12,4 @@ Nama : Fika Haliza<br>
  <li>menambahkan kolom No</li>
  <li>membuat latihan inti</li>
  <li>menambahkan Crerated At</li>
+ <li>menambahkan captcha</li>

@@ -8,3 +8,4 @@ Nama : Fika Haliza<br>
  <li>menambahkan tombol Aksi</li>
  <li>membuat cid di-casting</li>
  <li>menambahkan penampil flash sukses dan flash error</li>
+ <li>membuat file edit.php</li>
