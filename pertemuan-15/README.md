@@ -9,3 +9,6 @@ Nama : Fika Haliza<br>
  <li>membuat proses simpan data</li>
  <li>membuat file untuk proses</li>
  <li>membuat file untuk menampilkan data</li>
+ <li>melakukan validasi, sanitasi, prg</li>
+ <li>membuat hasil record yang di update</li>
+ <li>konfimasi penghapusan</li>
