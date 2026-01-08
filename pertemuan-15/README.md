@@ -12,3 +12,4 @@ Nama : Fika Haliza<br>
  <li>melakukan validasi, sanitasi, prg</li>
  <li>membuat hasil record yang di update</li>
  <li>konfimasi penghapusan</li>
+ <li>membuat file untuk tampilan hasil record yang di delete</li>
