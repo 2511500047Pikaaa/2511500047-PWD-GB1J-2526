@@ -7,3 +7,5 @@ Nama : Fika Haliza<br>
  <ol>
  <li></li>membuat creat table database(nama terserah)
  <li>membuat proses simpan data</li>
+ <li>membuat file untuk proses</li>
+ 
