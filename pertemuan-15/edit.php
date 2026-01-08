@@ -141,3 +141,21 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+<?php
+include 'koneksi.php';
+$id = $_GET['id'];
+$d = mysqli_fetch_assoc(
+  mysqli_query($conn, "SELECT * FROM biodata_mahasiswa WHERE id=$id")
+);
+?>
+
+<form action="update.php" method="POST">
+  <input type="hidden" name="id" value="<?= $d['id'] ?>">
+  <input type="text" name="nim" value="<?= $d['nim'] ?>" readonly>
+  <input type="text" name="nama" value="<?= $d['nama'] ?>">
+  <input type="email" name="email" value="<?= $d['email'] ?>">
+  <textarea name="alamat"><?= $d['alamat'] ?></textarea>
+  <button type="submit">Kirim</button>
+  <a href="tampil.php">Batal</a>
+</form>

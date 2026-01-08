@@ -110,3 +110,22 @@
   mysqli_stmt_close($stmt);
 
   redirect_ke('edit.php?cid='. (int)$cid);
+
+  <?php
+include 'koneksi.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $id     = $_POST['id'];
+  $nama   = htmlspecialchars(trim($_POST['nama']));
+  $email  = htmlspecialchars(trim($_POST['email']));
+  $alamat = htmlspecialchars(trim($_POST['alamat']));
+
+  mysqli_query($conn, "UPDATE biodata_mahasiswa SET
+    nama='$nama',
+    email='$email',
+    alamat='$alamat'
+    WHERE id=$id");
+
+  header("Location: tampil.php?status=update");
+  exit;
+}

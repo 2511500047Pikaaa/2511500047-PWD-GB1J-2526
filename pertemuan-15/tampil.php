@@ -19,3 +19,19 @@ $data = mysqli_query($conn, "SELECT * FROM biodata_mahasiswa");
 </tr>
 <?php } ?>
 </table>
+
+<?php
+if (isset($_GET['status'])) {
+  echo "<p>Data berhasil ".$_GET['status']."</p>";
+}
+?>
+
+<?php
+if (isset($_GET['status'])) {
+  if ($_GET['status'] == 'hapus_sukses') {
+    echo "<p style='color:green'>Data berhasil dihapus</p>";
+  } elseif ($_GET['status'] == 'hapus_gagal') {
+    echo "<p style='color:red'>Data gagal dihapus</p>";
+  }
+}
+?>
