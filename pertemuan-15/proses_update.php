@@ -111,7 +111,7 @@
 
   redirect_ke('edit.php?cid='. (int)$cid);
 
-  <?php
+ 
 include 'koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
