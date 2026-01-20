@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Bucin Animation</title>
+<style>
+    body {
+        margin: 0;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        font-family: 'Comic Sans MS', cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #text {
+        font-size: 28px;
+        color: white;
+        text-align: center;
+        width: 80%;
+        animation: fade 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes fade {
+        from { opacity: 0.3; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1.05); }
+    }
+
+    .heart {
+        position: absolute;
+        color: pink;
+        font-size: 20px;
+        animation: float 6s linear infinite;
+    }
+
+    @keyframes float {
+        from { transform: translateY(100vh) scale(0.5); opacity: 1; }
+        to { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+    }
+</style>
+</head>
+<body>
+
+<div id="text">Aku sayang kamu 💕</div>
+
+<script>
+const texts = [
+    "Aku sayang kamu 💕",
+    "Lebih dari apapun di dunia ini 🌍",
+    "Kalau kamu sedih, aku ikut sedih 😢",
+    "Kalau kamu bahagia, aku paling bahagia 😍",
+    "Pokoknya aku bucin kamu selamanya 💖"
+];
+
+let i = 0;
+setInterval(() => {
+    i = (i + 1) % texts.length;
+    document.getElementById("text").innerText = texts[i];
+}, 2000);
+
+// Hati jatuh
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerText = "💗";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+}, 300);
+</script>
+
+</body>
+</html>
