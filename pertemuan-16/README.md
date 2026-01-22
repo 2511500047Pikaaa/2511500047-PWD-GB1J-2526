@@ -11,3 +11,4 @@ Nama : Fika Haliza<br>
  <li>menampilkan file record menggunakan file pembaca</li>
  <li>menampilkan data yang dipilih pada form edit biodata pengunjung</li>
  <li>Edit Biodata Pengunjung dan dikirim dengan method POST, kemudian validasi, sanitasi, konsep PRG, dan update ke tabel</li>
+ <li>hasil record yang di update ditampilkan pada file pembaca</li>
