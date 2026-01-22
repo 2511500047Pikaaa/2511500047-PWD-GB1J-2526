@@ -22,7 +22,11 @@ while ($row = mysqli_fetch_assoc($q)) {
   echo "<div style='border:1px solid #ccc; padding:10px; margin-bottom:10px'>";
   echo tampilkanBiodata($fieldContact, $data);
 
-  // 🔑 INI KUNCI UTAMANYA
-  echo "<a href='biodata_edit.php?id={$row['cid']}'>Edit</a>";
+  echo "<a href='biodata_edit.php?id={$row['cid']}'>Edit</a> | ";
+  echo "<a href='biodata_delete.php?id={$row['cid']}'
+          onclick=\"return confirm('Yakin ingin menghapus data ini?')\">
+          Hapus
+        </a>";
+
   echo "</div>";
 }
