@@ -1,4 +1,19 @@
 <?php
+function tampilkanBiodata($fields, $data) {
+    $html = "<div class='biodata'>";
+
+    foreach ($fields as $key => $field) {
+        $nilai = $data[$key] ?? '';
+        $html .= "<p><strong>{$field['label']}</strong> "
+               . htmlspecialchars($nilai)
+               . "{$field['suffix']}</p>";
+    }
+
+    $html .= "</div><hr>";
+    return $html;
+}
+
+
 require 'koneksi.php';
 
 $fieldContact = [
