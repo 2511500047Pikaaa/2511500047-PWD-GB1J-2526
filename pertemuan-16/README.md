@@ -10,3 +10,4 @@ Nama : Fika Haliza<br>
  <li>membuat data dari form Biodata dengan method POST, kemudian validasi, sanitasi, konsep PRG, dan insert ke tabel</li>
  <li>menampilkan file record menggunakan file pembaca</li>
  <li>menampilkan data yang dipilih pada form edit biodata pengunjung</li>
+ <li>Edit Biodata Pengunjung dan dikirim dengan method POST, kemudian validasi, sanitasi, konsep PRG, dan update ke tabel</li>
