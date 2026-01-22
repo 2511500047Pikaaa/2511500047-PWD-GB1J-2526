@@ -1,20 +1,6 @@
 <?php
-function tampilkanBiodata($fields, $data) {
-    $html = "<div class='biodata'>";
-
-    foreach ($fields as $key => $field) {
-        $nilai = $data[$key] ?? '';
-        $html .= "<p><strong>{$field['label']}</strong> "
-               . htmlspecialchars($nilai)
-               . "{$field['suffix']}</p>";
-    }
-
-    $html .= "</div><hr>";
-    return $html;
-}
-
-
-require 'koneksi.php';
+require_once 'koneksi.php';
+require_once 'fungsi.php'; // ← penting: require_once
 
 $fieldContact = [
   "nama" => ["label" => "Nama:", "suffix" => ""],
@@ -24,18 +10,12 @@ $fieldContact = [
 
 $sql = "SELECT * FROM tbl_tamu ORDER BY cid DESC";
 $q = mysqli_query($conn, $sql);
-if (!$q) {
-  echo "<p>Gagal membaca data tamu: " . htmlspecialchars(mysqli_error($conn)) . "</p>";
-} elseif (mysqli_num_rows($q) === 0) {
-  echo "<p>Belum ada data tamu yang tersimpan.</p>";
-} else {
-  while ($row = mysqli_fetch_assoc($q)) {
-    $arrContact = [
-      "nama"  => $row["cnama"]  ?? "",
-      "email" => $row["cemail"] ?? "",
-      "pesan" => $row["cpesan"] ?? "",
-    ];
-    echo tampilkanBiodata($fieldContact, $arrContact);
-  }
+
+while ($row = mysqli_fetch_assoc($q)) {
+  $data = [
+    "nama"  => $row["cnama"],
+    "email" => $row["cemail"],
+    "pesan" => $row["cpesan"]
+  ];
+  echo tampilkanBiodata($fieldContact, $data);
 }
-?>
