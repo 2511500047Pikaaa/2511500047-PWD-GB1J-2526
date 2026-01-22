@@ -1,11 +1,6 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "db_pwd2025";
+$conn = new mysqli("localhost", "root", "", "biodata_pengunjung");
 
-$conn = mysqli_connect($host, $user, $pass, $db);
-
-if (!$conn) {
-  die("Koneksi gagal: " . mysqli_connect_error());
+if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
 }
