@@ -7,3 +7,5 @@ Nama : Fika Haliza<br>
 <br>
  <ol>
  <li>membuat table biodata pengunjung di mysql</li>
+ <li>membuat data dari form Biodata dengan method POST, kemudian validasi, sanitasi, konsep PRG, dan insert ke tabel</li>
+ <li>menampilkan file record menggunakan file pembaca</li>
