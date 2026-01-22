@@ -7,7 +7,7 @@ function redirect_ke($url)
 
 function bersihkan($str)
 {
-  return htmlspecialchars(trim($str));
+  return htmlspecialchars(trim($str), ENT_QUOTES, 'UTF-8');
 }
 
 function tidakKosong($str)
@@ -27,7 +27,6 @@ function tampilkanBiodata($conf, $arr)
     $label = $v["label"];
     $nilai = bersihkan($arr[$k] ?? '');
     $suffix = $v["suffix"];
-
     $html .= "<p><strong>{$label}</strong> {$nilai}{$suffix}</p>";
   }
   return $html;
