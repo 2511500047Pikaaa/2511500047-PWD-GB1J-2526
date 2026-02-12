@@ -2,75 +2,116 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Bucin Animation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
 <style>
     body {
         margin: 0;
+        font-family: 'Arial', sans-serif;
         background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        font-family: 'Comic Sans MS', cursive;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
-        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    #text {
-        font-size: 28px;
-        color: white;
+    .card {
+        background: white;
+        width: 90%;
+        max-width: 350px;
+        padding: 25px;
+        border-radius: 20px;
         text-align: center;
-        width: 80%;
-        animation: fade 1.5s ease-in-out infinite alternate;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        animation: fadeIn 1s ease;
     }
 
-    @keyframes fade {
-        from { opacity: 0.3; transform: scale(0.95); }
-        to { opacity: 1; transform: scale(1.05); }
+    h1 {
+        color: #ff4d6d;
     }
 
-    .heart {
-        position: absolute;
-        color: pink;
-        font-size: 20px;
-        animation: float 6s linear infinite;
+    p {
+        font-size: 18px;
+        margin: 20px 0;
     }
 
-    @keyframes float {
-        from { transform: translateY(100vh) scale(0.5); opacity: 1; }
-        to { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+    button {
+        background: #ff4d6d;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ff1e50;
+    }
+
+    .choices button {
+        width: 100%;
+        margin: 10px 0;
+        background: #ffe3ea;
+        color: #ff4d6d;
+        border: 2px solid #ff4d6d;
+    }
+
+    .choices button:hover {
+        background: #ff4d6d;
+        color: white;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: scale(0.9);}
+        to {opacity: 1; transform: scale(1);}
     }
 </style>
 </head>
+
 <body>
 
-<div id="text">Aku sayang kamu 💕</div>
+<div class="card" id="content">
+    <h1>Hai kamu ❤️</h1>
+    <p>Aku punya pertanyaan penting nih…</p>
+    <button onclick="nextQuestion()">Lanjut 💌</button>
+</div>
 
 <script>
-const texts = [
-    "Haiii ijull💕",
-    "Semangatt teruss yaa🌍",
-    "Kalo cape ngeluh ke akuu😢",
-    "Aku siap dengerin semua keluhan kamu😍 ",
-    "I loveee Youuuu sayangg💖"
-];
+function nextQuestion() {
+    document.getElementById("content").innerHTML = `
+        <h1>💖</h1>
+        <p>Kamu mau jadi Valentine aku?</p>
+        <button onclick="showChoices()">Iya dong 🥰</button>
+    `;
+}
 
-let i = 0;
-setInterval(() => {
-    i = (i + 1) % texts.length;
-    document.getElementById("text").innerText = texts[i];
-}, 2000);
+function showChoices() {
+    document.getElementById("content").innerHTML = `
+        <h1>Pilih Hadiah 🎁</h1>
+        <div class="choices">
+            <button onclick="result('kiss')">💋 Voucher Kiss</button>
+            <button onclick="result('hug')">🤗 Voucher Pelukan</button>
+            <button onclick="result('date')">🍽️ Dinner Bareng</button>
+        </div>
+    `;
+}
 
-// Hati jatuh
-setInterval(() => {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerText = "💗";
-    heart.style.left = Math.random() * window.innerWidth + "px";
-    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
-    document.body.appendChild(heart);
+function result(type) {
+    let text = "";
+    if (type === 'kiss') text = "Yeay! Kamu dapet 💋 KISS dari aku 😘";
+    if (type === 'hug') text = "Pelukan hangat buat kamu 🤗❤️";
+    if (type === 'date') text = "Siap-siap yaa, kita dinner bareng 🍽️💖";
 
-    setTimeout(() => heart.remove(), 6000);
-}, 300);
+    document.getElementById("content").innerHTML = `
+        <h1>💞</h1>
+        <p>${text}</p>
+        <p>Happy Valentine ❤️</p>
+    `;
+}
 </script>
 
 </body>
