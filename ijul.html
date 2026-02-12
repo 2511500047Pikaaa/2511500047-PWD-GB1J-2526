@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Ijull</title>
+<title>Untuk Ijull</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap');
 
 body {
     margin: 0;
@@ -15,25 +15,24 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Inter', sans-serif;
-    color: #3a3a3a;
+    color: #1f2a44;
 
-    /* BACKGROUND MOTIF BUNGA */
-    background-color: #efe6dc;
-    background-image:
-      radial-gradient(circle at 20px 20px, rgba(255,255,255,0.35) 2px, transparent 2px),
-      radial-gradient(circle at 60px 60px, rgba(255,255,255,0.25) 2px, transparent 2px);
-    background-size: 80px 80px;
+    /* background biru */
+    background: linear-gradient(rgba(32,72,150,0.85), rgba(32,72,150,0.85)),
+    url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1200&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
 }
 
 .card {
-    background: rgba(247, 243, 239, 0.92); /* cream, bukan putih */
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(6px);
     width: 90%;
-    max-width: 420px;
-    padding: 40px 30px;
-    border-radius: 20px;
+    max-width: 460px;
+    padding: 45px 35px;
+    border-radius: 22px;
     text-align: center;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.08);
-    backdrop-filter: blur(4px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
 }
 
 h1 {
@@ -43,45 +42,36 @@ h1 {
 }
 
 p {
-    font-size: 16px;
-    line-height: 1.8;
-    min-height: 140px;
+    font-size: 15.5px;
+    line-height: 1.9;
+    min-height: 150px;
 }
 
 button {
-    margin-top: 25px;
-    padding: 10px 22px;
-    border-radius: 25px;
-    border: 1px solid #c9b8a8;
+    margin-top: 20px;
+    padding: 10px 26px;
+    border-radius: 24px;
+    border: 1px solid #1f2a44;
     background: transparent;
-    color: #3a3a3a;
+    color: #1f2a44;
     font-size: 14px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #c9b8a8;
+    background: #1f2a44;
     color: white;
 }
 
 .choice {
     width: 100%;
-    margin: 10px 0;
+    margin: 12px 0;
 }
 </style>
 </head>
 
 <body>
-
-<iframe
-    width="0"
-    height="0"
-    src="https://www.youtube.com/embed/413xi0fC8hg?autoplay=1&loop=1&playlist=413xi0fC8hg"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-</iframe>
 
 <div class="card" id="content">
     <h1>Ijull</h1>
@@ -90,21 +80,21 @@ button:hover {
 </div>
 
 <script>
-const music = document.getElementById("music");
 
 const textIntro = `
 Ini dari Lizaaa.
 
-Mungkin ini bukan cara yang biasa,
-tapi aku ingin kamu membaca ini dengan pelan.
+Bukan sesuatu yang besar,
+hanya hal kecil yang ingin kamu baca perlahan.
 
-Tentang rasa yang tumbuh tanpa diminta,
-tentang nyaman yang datang tanpa alasan,
+Tentang perasaan yang tumbuh diam-diam,
+tentang nyaman yang tidak dibuat-buat,
 dan tentang kamu,
-yang perlahan jadi bagian penting dalam hariku.
+yang entah sejak kapan menjadi penting.
 `;
 
 let i = 0;
+
 function typeText(text, elementId, callback) {
     const el = document.getElementById(elementId);
     el.innerHTML = "";
@@ -113,7 +103,7 @@ function typeText(text, elementId, callback) {
         if (i < text.length) {
             el.innerHTML += text.charAt(i);
             i++;
-            setTimeout(typing, 45);
+            setTimeout(typing, 40);
         } else if (callback) {
             callback();
         }
@@ -124,23 +114,20 @@ function typeText(text, elementId, callback) {
 typeText(textIntro, "typing");
 
 function start() {
-    music.play();
     document.getElementById("content").innerHTML = `
         <h1>Ijull</h1>
         <p id="typing2"></p>
         <button onclick="question()">Lanjut</button>
     `;
+
     typeText(`
-Aku tidak pernah merencanakan jatuh cinta.
-Namun sejak kamu ada,
-hal-hal kecil jadi terasa berbeda.
+Aku tidak pernah merencanakan apa pun.
+Tapi setiap percakapan denganmu
+selalu terasa lebih lama dari waktu yang ada.
 
-Percakapan sederhana,
-waktu yang terasa singkat,
-dan rindu yang datang diam-diam.
-
-Mungkin tanpa sadar,
-aku sudah memilihmu.
+Mungkin aku tidak selalu pandai mengungkapkan,
+tapi aku tahu satu hal:
+aku nyaman bersamamu.
     `, "typing2");
 }
 
@@ -148,10 +135,9 @@ function question() {
     document.getElementById("content").innerHTML = `
         <h1>Satu pertanyaan</h1>
         <p>
-        Kalau suatu hari nanti,
-aku ingin tetap berjalan di sampingmu,
-dalam versi terbaik dan terburukku,
-apakah kamu bersedia?
+Kalau aku ingin tetap ada,
+di hari baik maupun hari yang tidak mudah,
+apakah kamu bersedia berjalan bersamaku?
         </p>
         <button onclick="choices()">Iya</button>
         <button id="noBtn">Tidak</button>
@@ -160,33 +146,34 @@ apakah kamu bersedia?
     const noBtn = document.getElementById("noBtn");
     noBtn.addEventListener("mouseover", () => {
         noBtn.style.position = "relative";
-        noBtn.style.left = Math.random()*120 - 60 + "px";
-        noBtn.style.top = Math.random()*80 - 40 + "px";
+        noBtn.style.left = Math.random()*140 - 70 + "px";
+        noBtn.style.top = Math.random()*100 - 50 + "px";
     });
 }
 
 function choices() {
     document.getElementById("content").innerHTML = `
         <h1>Untukmu</h1>
-        <button class="choice" onclick="endText(1)">Waktu dan perhatian</button>
-        <button class="choice" onclick="endText(2)">Pelukan saat lelah</button>
-        <button class="choice" onclick="endText(3)">Janji untuk tetap tinggal</button>
+        <button class="choice" onclick="endText(1)">Waktu</button>
+        <button class="choice" onclick="endText(2)">Pelukan</button>
+        <button class="choice" onclick="endText(3)">Kesetiaan</button>
     `;
 }
 
 function endText(type) {
     let text = "";
-    if(type === 1) text = "Aku ingin memberi kamu tempat yang tenang, di mana kamu selalu bisa pulang.";
-    if(type === 2) text = "Aku ingin jadi seseorang yang kamu cari saat dunia terasa berat.";
-    if(type === 3) text = "Aku tidak menjanjikan kesempurnaan, hanya ketulusan untuk tetap ada.";
+    if(type === 1) text = "Aku ingin berbagi hari-hari sederhana, tanpa perlu menjadi sempurna.";
+    if(type === 2) text = "Aku ingin menjadi tempat pulang saat kamu lelah.";
+    if(type === 3) text = "Aku tidak menjanjikan banyak hal, hanya kehadiran yang sungguh-sungguh.";
 
     document.getElementById("content").innerHTML = `
         <h1>Lizaaa & Ijull</h1>
         <p>${text}<br><br>
-        Terima kasih sudah menjadi alasan aku percaya pada rasa ini.
+Terima kasih sudah membuat semuanya terasa berbeda.
         </p>
     `;
 }
+
 </script>
 
 </body>
