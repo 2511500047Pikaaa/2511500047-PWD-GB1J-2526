@@ -15,24 +15,29 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Inter', sans-serif;
-    color: #1f2a44;
+    color: #24324a;
 
-    /* background biru */
-    background: linear-gradient(rgba(32,72,150,0.85), rgba(32,72,150,0.85)),
-    url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1200&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
+    /* BIRU SOFT TENANG */
+    background-color: #cfdcf6;
+
+    /* bunga kartun halus */
+    background-image:
+      radial-gradient(circle at 30px 30px, #ffffff 10px, transparent 11px),
+      radial-gradient(circle at 30px 30px, #d85a5a 5px, transparent 6px),
+      radial-gradient(circle at 90px 90px, #ffffff 10px, transparent 11px),
+      radial-gradient(circle at 90px 90px, #d85a5a 5px, transparent 6px);
+
+    background-size: 140px 140px;
 }
 
 .card {
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.9);
     width: 90%;
     max-width: 460px;
     padding: 45px 35px;
-    border-radius: 22px;
+    border-radius: 24px;
     text-align: center;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
 }
 
 h1 {
@@ -51,16 +56,16 @@ button {
     margin-top: 20px;
     padding: 10px 26px;
     border-radius: 24px;
-    border: 1px solid #1f2a44;
+    border: 1px solid #24324a;
     background: transparent;
-    color: #1f2a44;
+    color: #24324a;
     font-size: 14px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #1f2a44;
+    background: #24324a;
     color: white;
 }
 
@@ -84,13 +89,12 @@ button:hover {
 const textIntro = `
 Ini dari Lizaaa.
 
-Bukan sesuatu yang besar,
-hanya hal kecil yang ingin kamu baca perlahan.
+Tidak dibuat berlebihan,
+hanya sesuatu yang ingin kamu baca perlahan.
 
-Tentang perasaan yang tumbuh diam-diam,
-tentang nyaman yang tidak dibuat-buat,
+Tentang rasa yang datang tanpa banyak suara,
 dan tentang kamu,
-yang entah sejak kapan menjadi penting.
+yang membuat semuanya terasa lebih tenang.
 `;
 
 let i = 0;
@@ -121,13 +125,14 @@ function start() {
     `;
 
     typeText(`
-Aku tidak pernah merencanakan apa pun.
-Tapi setiap percakapan denganmu
-selalu terasa lebih lama dari waktu yang ada.
+Sejak kamu hadir,
+hal-hal kecil terasa berbeda.
 
-Mungkin aku tidak selalu pandai mengungkapkan,
-tapi aku tahu satu hal:
-aku nyaman bersamamu.
+Bukan karena berlebihan,
+tapi karena terasa pas.
+
+Dan mungkin,
+itu sudah cukup.
     `, "typing2");
 }
 
@@ -136,8 +141,8 @@ function question() {
         <h1>Satu pertanyaan</h1>
         <p>
 Kalau aku ingin tetap ada,
-di hari baik maupun hari yang tidak mudah,
-apakah kamu bersedia berjalan bersamaku?
+tanpa drama dan tanpa berlebihan,
+apakah kamu mau berjalan bersamaku?
         </p>
         <button onclick="choices()">Iya</button>
         <button id="noBtn">Tidak</button>
@@ -155,21 +160,21 @@ function choices() {
     document.getElementById("content").innerHTML = `
         <h1>Untukmu</h1>
         <button class="choice" onclick="endText(1)">Waktu</button>
-        <button class="choice" onclick="endText(2)">Pelukan</button>
-        <button class="choice" onclick="endText(3)">Kesetiaan</button>
+        <button class="choice" onclick="endText(2)">Perhatian</button>
+        <button class="choice" onclick="endText(3)">Kesungguhan</button>
     `;
 }
 
 function endText(type) {
     let text = "";
-    if(type === 1) text = "Aku ingin berbagi hari-hari sederhana, tanpa perlu menjadi sempurna.";
-    if(type === 2) text = "Aku ingin menjadi tempat pulang saat kamu lelah.";
-    if(type === 3) text = "Aku tidak menjanjikan banyak hal, hanya kehadiran yang sungguh-sungguh.";
+    if(type === 1) text = "Aku ingin berbagi hari-hari sederhana, tanpa terburu-buru.";
+    if(type === 2) text = "Aku ingin hadir, bahkan saat kamu tidak meminta.";
+    if(type === 3) text = "Aku tidak menjanjikan kesempurnaan, hanya niat yang tulus.";
 
     document.getElementById("content").innerHTML = `
         <h1>Lizaaa & Ijull</h1>
         <p>${text}<br><br>
-Terima kasih sudah membuat semuanya terasa berbeda.
+Terima kasih sudah membaca sampai akhir.
         </p>
     `;
 }
