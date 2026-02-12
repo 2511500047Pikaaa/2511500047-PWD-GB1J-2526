@@ -15,35 +15,42 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Inter', sans-serif;
-    color: #24324a;
+    color: #2a3550;
 
-    /* BIRU SOFT TENANG */
-    background-color: #cfdcf6;
+    /* BIRU PASTEL SUPER SOFT */
+    background-color: #eaf1ff;
 
-    /* bunga kartun halus */
+    /* pattern bunga kartun */
     background-image:
-      radial-gradient(circle at 30px 30px, #ffffff 10px, transparent 11px),
-      radial-gradient(circle at 30px 30px, #d85a5a 5px, transparent 6px),
-      radial-gradient(circle at 90px 90px, #ffffff 10px, transparent 11px),
-      radial-gradient(circle at 90px 90px, #d85a5a 5px, transparent 6px);
+      radial-gradient(circle at 40px 40px, #ffffff 12px, transparent 13px),
+      radial-gradient(circle at 28px 40px, #d96b6b 6px, transparent 7px),
+      radial-gradient(circle at 52px 40px, #d96b6b 6px, transparent 7px),
+      radial-gradient(circle at 40px 28px, #d96b6b 6px, transparent 7px),
+      radial-gradient(circle at 40px 52px, #d96b6b 6px, transparent 7px),
 
-    background-size: 140px 140px;
+      radial-gradient(circle at 120px 120px, #ffffff 12px, transparent 13px),
+      radial-gradient(circle at 108px 120px, #d96b6b 6px, transparent 7px),
+      radial-gradient(circle at 132px 120px, #d96b6b 6px, transparent 7px),
+      radial-gradient(circle at 120px 108px, #d96b6b 6px, transparent 7px),
+      radial-gradient(circle at 120px 132px, #d96b6b 6px, transparent 7px);
+
+    background-size: 180px 180px;
 }
 
 .card {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     width: 90%;
     max-width: 460px;
-    padding: 45px 35px;
-    border-radius: 24px;
+    padding: 50px 40px;
+    border-radius: 26px;
     text-align: center;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.08);
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 p {
@@ -53,19 +60,19 @@ p {
 }
 
 button {
-    margin-top: 20px;
+    margin-top: 22px;
     padding: 10px 26px;
     border-radius: 24px;
-    border: 1px solid #24324a;
+    border: 1px solid #2a3550;
     background: transparent;
-    color: #24324a;
+    color: #2a3550;
     font-size: 14px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #24324a;
+    background: #2a3550;
     color: white;
 }
 
@@ -89,12 +96,12 @@ button:hover {
 const textIntro = `
 Ini dari Lizaaa.
 
-Tidak dibuat berlebihan,
-hanya sesuatu yang ingin kamu baca perlahan.
+Tidak berlebihan,
+tidak juga dibuat dramatis.
 
-Tentang rasa yang datang tanpa banyak suara,
-dan tentang kamu,
-yang membuat semuanya terasa lebih tenang.
+Hanya sesuatu yang ingin kamu baca pelan-pelan,
+karena mungkin,
+ada rasa yang tumbuh dengan tenang.
 `;
 
 let i = 0;
@@ -126,13 +133,13 @@ function start() {
 
     typeText(`
 Sejak kamu hadir,
-hal-hal kecil terasa berbeda.
+hari terasa sedikit lebih ringan.
 
-Bukan karena berlebihan,
-tapi karena terasa pas.
+Percakapan sederhana,
+tawa yang tidak dibuat-buat,
+dan rasa nyaman yang datang begitu saja.
 
-Dan mungkin,
-itu sudah cukup.
+Mungkin itu alasan aku tetap di sini.
     `, "typing2");
 }
 
@@ -140,8 +147,8 @@ function question() {
     document.getElementById("content").innerHTML = `
         <h1>Satu pertanyaan</h1>
         <p>
-Kalau aku ingin tetap ada,
-tanpa drama dan tanpa berlebihan,
+Kalau aku memilih untuk tetap ada,
+tanpa banyak janji dan tanpa drama,
 apakah kamu mau berjalan bersamaku?
         </p>
         <button onclick="choices()">Iya</button>
@@ -160,16 +167,16 @@ function choices() {
     document.getElementById("content").innerHTML = `
         <h1>Untukmu</h1>
         <button class="choice" onclick="endText(1)">Waktu</button>
-        <button class="choice" onclick="endText(2)">Perhatian</button>
+        <button class="choice" onclick="endText(2)">Kehadiran</button>
         <button class="choice" onclick="endText(3)">Kesungguhan</button>
     `;
 }
 
 function endText(type) {
     let text = "";
-    if(type === 1) text = "Aku ingin berbagi hari-hari sederhana, tanpa terburu-buru.";
-    if(type === 2) text = "Aku ingin hadir, bahkan saat kamu tidak meminta.";
-    if(type === 3) text = "Aku tidak menjanjikan kesempurnaan, hanya niat yang tulus.";
+    if(type === 1) text = "Aku ingin berbagi hari-hari biasa yang terasa istimewa.";
+    if(type === 2) text = "Aku ingin tetap ada, bahkan saat keadaan tidak selalu mudah.";
+    if(type === 3) text = "Aku tidak menjanjikan banyak hal, hanya niat yang sungguh.";
 
     document.getElementById("content").innerHTML = `
         <h1>Lizaaa & Ijull</h1>
