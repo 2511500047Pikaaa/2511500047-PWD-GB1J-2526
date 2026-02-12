@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "db_pwd2025");
+$conn = mysqli_connect("localhost", "root", "", "biodata_pengunjung");
 
 if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);

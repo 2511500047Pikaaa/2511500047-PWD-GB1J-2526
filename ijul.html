@@ -11,56 +11,63 @@
 body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(180deg, #f6f2ed, #e9e1d8);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Inter', sans-serif;
-    color: #2f2f2f;
+    color: #3a3a3a;
+
+    /* BACKGROUND MOTIF BUNGA */
+    background-color: #efe6dc;
+    background-image:
+      radial-gradient(circle at 20px 20px, rgba(255,255,255,0.35) 2px, transparent 2px),
+      radial-gradient(circle at 60px 60px, rgba(255,255,255,0.25) 2px, transparent 2px);
+    background-size: 80px 80px;
 }
 
 .card {
-    background: rgba(255,255,255,0.95);
+    background: rgba(247, 243, 239, 0.92); /* cream, bukan putih */
     width: 90%;
-    max-width: 440px;
-    padding: 42px 34px;
+    max-width: 420px;
+    padding: 40px 30px;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 25px 45px rgba(0,0,0,0.08);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+    backdrop-filter: blur(4px);
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 p {
-    font-size: 15.5px;
-    line-height: 1.9;
-    min-height: 160px;
+    font-size: 16px;
+    line-height: 1.8;
+    min-height: 140px;
 }
 
 button {
-    margin-top: 26px;
-    padding: 10px 24px;
-    border-radius: 24px;
-    border: 1px solid #cbb8a6;
+    margin-top: 25px;
+    padding: 10px 22px;
+    border-radius: 25px;
+    border: 1px solid #c9b8a8;
     background: transparent;
-    color: #2f2f2f;
+    color: #3a3a3a;
     font-size: 14px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #cbb8a6;
+    background: #c9b8a8;
     color: white;
 }
 
 .choice {
     width: 100%;
-    margin: 12px 0;
+    margin: 10px 0;
 }
 </style>
 </head>
@@ -83,12 +90,13 @@ const music = document.getElementById("music");
 const textIntro = `
 Ini dari Lizaaa.
 
-Aku tidak tahu sejak kapan,
-tapi kehadiranmu mulai terasa berbeda.
+Mungkin ini bukan cara yang biasa,
+tapi aku ingin kamu membaca ini dengan pelan.
 
-Bukan sesuatu yang besar,
-hanya hal-hal kecil yang tiba-tiba
-terasa lebih berarti.
+Tentang rasa yang tumbuh tanpa diminta,
+tentang nyaman yang datang tanpa alasan,
+dan tentang kamu,
+yang perlahan jadi bagian penting dalam hariku.
 `;
 
 let i = 0;
@@ -118,25 +126,27 @@ function start() {
         <button onclick="question()">Lanjut</button>
     `;
     typeText(`
-Aku terbiasa menjalani hari dengan caraku sendiri.
-Namun belakangan,
-aku mulai menunggu kabarmu
-tanpa benar-benar sadar alasannya.
+Aku tidak pernah merencanakan jatuh cinta.
+Namun sejak kamu ada,
+hal-hal kecil jadi terasa berbeda.
 
-Mungkin di situlah jawabannya.
+Percakapan sederhana,
+waktu yang terasa singkat,
+dan rindu yang datang diam-diam.
+
+Mungkin tanpa sadar,
+aku sudah memilihmu.
     `, "typing2");
 }
 
 function question() {
     document.getElementById("content").innerHTML = `
-        <h1>Satu hal</h1>
+        <h1>Satu pertanyaan</h1>
         <p>
-Aku tidak ingin terburu-buru.
-Aku hanya ingin jujur.
-
-Jika suatu hari aku memilih untuk tetap tinggal,
-dan kamu juga tidak keberatan,
-apakah itu cukup untuk kita mulai?
+        Kalau suatu hari nanti,
+aku ingin tetap berjalan di sampingmu,
+dalam versi terbaik dan terburukku,
+apakah kamu bersedia?
         </p>
         <button onclick="choices()">Iya</button>
         <button id="noBtn">Tidak</button>
@@ -152,27 +162,23 @@ apakah itu cukup untuk kita mulai?
 
 function choices() {
     document.getElementById("content").innerHTML = `
-        <h1>Jika kamu memilih tinggal</h1>
-        <button class="choice" onclick="endText(1)">Waktu yang tidak dipaksakan</button>
-        <button class="choice" onclick="endText(2)">Tempat untuk pulang</button>
-        <button class="choice" onclick="endText(3)">Kesediaan untuk saling belajar</button>
+        <h1>Untukmu</h1>
+        <button class="choice" onclick="endText(1)">Waktu dan perhatian</button>
+        <button class="choice" onclick="endText(2)">Pelukan saat lelah</button>
+        <button class="choice" onclick="endText(3)">Janji untuk tetap tinggal</button>
     `;
 }
 
 function endText(type) {
     let text = "";
-    if(type === 1) text = "Aku tidak menjanjikan selalu ada, tapi aku akan berusaha tidak pergi tanpa alasan.";
-    if(type === 2) text = "Aku ingin menjadi seseorang yang membuatmu merasa aman tanpa perlu banyak kata.";
-    if(type === 3) text = "Aku tidak sempurna, tapi aku bersedia belajar selama kamu juga mau tinggal.";
+    if(type === 1) text = "Aku ingin memberi kamu tempat yang tenang, di mana kamu selalu bisa pulang.";
+    if(type === 2) text = "Aku ingin jadi seseorang yang kamu cari saat dunia terasa berat.";
+    if(type === 3) text = "Aku tidak menjanjikan kesempurnaan, hanya ketulusan untuk tetap ada.";
 
     document.getElementById("content").innerHTML = `
         <h1>Lizaaa & Ijull</h1>
-        <p>
-        ${text}
-
-        Terima kasih sudah membaca sejauh ini.
-        Apa pun pilihanmu,
-        aku menghargainya.
+        <p>${text}<br><br>
+        Terima kasih sudah menjadi alasan aku percaya pada rasa ini.
         </p>
     `;
 }
