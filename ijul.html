@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ijull</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(180deg, #f6f2ed, #e9e1d8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    color: #2f2f2f;
+}
+
+.card {
+    background: rgba(255,255,255,0.95);
+    width: 90%;
+    max-width: 440px;
+    padding: 42px 34px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.08);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+p {
+    font-size: 15.5px;
+    line-height: 1.9;
+    min-height: 160px;
+}
+
+button {
+    margin-top: 26px;
+    padding: 10px 24px;
+    border-radius: 24px;
+    border: 1px solid #cbb8a6;
+    background: transparent;
+    color: #2f2f2f;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #cbb8a6;
+    color: white;
+}
+
+.choice {
+    width: 100%;
+    margin: 12px 0;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card" id="content">
+    <h1>Ijull</h1>
+    <p id="typing"></p>
+    <button onclick="start()">Lanjut</button>
+</div>
+
+<script>
+const music = document.getElementById("music");
+
+const textIntro = `
+Ini dari Lizaaa.
+
+Aku tidak tahu sejak kapan,
+tapi kehadiranmu mulai terasa berbeda.
+
+Bukan sesuatu yang besar,
+hanya hal-hal kecil yang tiba-tiba
+terasa lebih berarti.
+`;
+
+let i = 0;
+function typeText(text, elementId, callback) {
+    const el = document.getElementById(elementId);
+    el.innerHTML = "";
+    i = 0;
+    function typing() {
+        if (i < text.length) {
+            el.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, 45);
+        } else if (callback) {
+            callback();
+        }
+    }
+    typing();
+}
+
+typeText(textIntro, "typing");
+
+function start() {
+    music.play();
+    document.getElementById("content").innerHTML = `
+        <h1>Ijull</h1>
+        <p id="typing2"></p>
+        <button onclick="question()">Lanjut</button>
+    `;
+    typeText(`
+Aku terbiasa menjalani hari dengan caraku sendiri.
+Namun belakangan,
+aku mulai menunggu kabarmu
+tanpa benar-benar sadar alasannya.
+
+Mungkin di situlah jawabannya.
+    `, "typing2");
+}
+
+function question() {
+    document.getElementById("content").innerHTML = `
+        <h1>Satu hal</h1>
+        <p>
+Aku tidak ingin terburu-buru.
+Aku hanya ingin jujur.
+
+Jika suatu hari aku memilih untuk tetap tinggal,
+dan kamu juga tidak keberatan,
+apakah itu cukup untuk kita mulai?
+        </p>
+        <button onclick="choices()">Iya</button>
+        <button id="noBtn">Tidak</button>
+    `;
+
+    const noBtn = document.getElementById("noBtn");
+    noBtn.addEventListener("mouseover", () => {
+        noBtn.style.position = "relative";
+        noBtn.style.left = Math.random()*120 - 60 + "px";
+        noBtn.style.top = Math.random()*80 - 40 + "px";
+    });
+}
+
+function choices() {
+    document.getElementById("content").innerHTML = `
+        <h1>Jika kamu memilih tinggal</h1>
+        <button class="choice" onclick="endText(1)">Waktu yang tidak dipaksakan</button>
+        <button class="choice" onclick="endText(2)">Tempat untuk pulang</button>
+        <button class="choice" onclick="endText(3)">Kesediaan untuk saling belajar</button>
+    `;
+}
+
+function endText(type) {
+    let text = "";
+    if(type === 1) text = "Aku tidak menjanjikan selalu ada, tapi aku akan berusaha tidak pergi tanpa alasan.";
+    if(type === 2) text = "Aku ingin menjadi seseorang yang membuatmu merasa aman tanpa perlu banyak kata.";
+    if(type === 3) text = "Aku tidak sempurna, tapi aku bersedia belajar selama kamu juga mau tinggal.";
+
+    document.getElementById("content").innerHTML = `
+        <h1>Lizaaa & Ijull</h1>
+        <p>
+        ${text}
+
+        Terima kasih sudah membaca sejauh ini.
+        Apa pun pilihanmu,
+        aku menghargainya.
+        </p>
+    `;
+}
+</script>
+
+</body>
+</html>
